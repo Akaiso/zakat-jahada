@@ -3,8 +3,10 @@ import 'DonatePage.dart';
 
 class DonationCategoryButton extends StatelessWidget {
   final String categoryName;
+  final String description;
 
-  const DonationCategoryButton({super.key, required this.categoryName});
+  const DonationCategoryButton(
+      {super.key, required this.categoryName, required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +18,10 @@ class DonationCategoryButton extends StatelessWidget {
               context,
               MaterialPageRoute(
                   builder: (context) => DonatePage(
-                      categoryButton: DonationCategoryButton(
-                          categoryName: categoryName))));
+                        categoryButton: DonationCategoryButton(
+                            categoryName: categoryName,
+                            description: description),
+                      )));
           // Implement donation process for the selected category
         },
         style: ButtonStyle(

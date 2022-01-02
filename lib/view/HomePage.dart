@@ -4,13 +4,14 @@ import 'package:zakat_jahada/view/ContactUs.dart';
 import 'AboutUs.dart';
 import 'DonationHomePage.dart';
 
-
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Zakat Jahada'),
+        leading:
+            SizedBox(height: 20, width: 20, child: Icon(Icons.mosque_rounded)),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -19,9 +20,29 @@ class HomePage extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.5,
               width: MediaQuery.of(context).size.width,
-              child: Image.asset(
-                'assets/images/zakat-banner-1.png',
-                fit: BoxFit.cover,
+              child: Stack(clipBehavior: Clip.none,
+
+                children: [
+                  Positioned(
+                      child: Image.asset(
+                    'assets/images/zakat-banner-1.png',width: MediaQuery.of(context).size.width,
+                    fit: BoxFit.cover,
+                  )),
+                  const Positioned(top: 130,
+                      left: 20,
+                      child: CircleAvatar(
+                        radius: 102,
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.white,
+                        child: CircleAvatar(
+                          foregroundColor: Colors.white,
+                          backgroundColor: Colors.white,
+                          radius: 100,
+                          foregroundImage: AssetImage("assets/images/ramadan.png"),
+                        ),
+                      )),
+
+                ],
               ),
             ),
             const Padding(
@@ -35,6 +56,8 @@ class HomePage extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
+            SizedBox(height: 20),
+
             const SizedBox(height: 50),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -57,11 +80,11 @@ class HomePage extends StatelessWidget {
                                 textAlign: TextAlign.center),
                             SizedBox(height: 10),
                             AutoSizeText(
-                              "At Zakat Jahada, we envision a world "
-                                  "where every individual has access to basic necessities,"
-                                  " opportunities for growth, and the means to achieve their full "
-                                  "potential. We believe in the power of collective generosity to "
-                                  "transform lives and communities.",
+                              "We envision a world "
+                              "where every individual has access to basic necessities,"
+                              " opportunities for growth, and the means to achieve their full "
+                              "potential. We believe in the power of collective generosity to "
+                              "transform lives and communities.",
                               style: TextStyle(
                                   fontSize: 17, color: Colors.black54),
                               minFontSize: 15,
@@ -92,8 +115,8 @@ class HomePage extends StatelessWidget {
                             SizedBox(height: 10),
                             AutoSizeText(
                               'Our mission is to facilitate impactful and transparent '
-                                  'giving by connecting donors with meaningful projects that address '
-                                  'pressing social needs. Through collaborative efforts, we strive to:',
+                              'giving by poviding an easy to navigate platform , connecting donors with meaningful projects that address '
+                              'pressing social needs. Through collaborative efforts, we strive to: Alleviate Hunger, build sustainable housing, empowerment, foster digital inclusion',
                               style: TextStyle(
                                   color: Colors.black54, fontSize: 17),
                               minFontSize: 15,
@@ -120,7 +143,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(fontSize: 17)),
               subtitle: const Text(
                   "We are committed to providing nutritious meals to those "
-                      "facing food insecurity, ensuring that no one goes to bed hungry."),
+                  "facing food insecurity, ensuring that no one goes to bed hungry."),
             ),
             ListTile(
               leading: Container(
@@ -132,7 +155,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(fontSize: 17)),
               subtitle: const Text(
                   "We aim to create safe and affordable housing solutions for"
-                      " marginalized communities, offering them stability and dignity."),
+                  " marginalized communities, offering them stability and dignity."),
             ),
             ListTile(
               leading: Container(
@@ -144,8 +167,8 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(fontSize: 17)),
               subtitle: const Text(
                   "We seek to empower individuals with the practical skills "
-                      "and knowledge necessary to secure sustainable livelihoods, fostering "
-                      "independence and self-reliance."),
+                  "and knowledge necessary to secure sustainable livelihoods, fostering "
+                  "independence and self-reliance."),
             ),
             ListTile(
               leading: Container(
@@ -157,20 +180,8 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(fontSize: 17)),
               subtitle: const Text(
                   " We believe in the transformative power of technology. By offering "
-                      "training in Information Technology, we equip individuals with the tools they "
-                      "need to thrive in the digital age."),
-            ),
-            ListTile(
-              leading: Container(
-                height: 10,
-                width: 10,
-                color: Colors.green,
-              ),
-              title: const Text("Alleviate Hunger",
-                  style: TextStyle(fontSize: 17)),
-              subtitle: const Text(
-                  "We are committed to providing nutritious meals to those "
-                      "facing food insecurity, ensuring that no one goes to bed hungry."),
+                  "training in Information Technology, we equip individuals with the tools they "
+                  "need to thrive in the digital age."),
             ),
             const SizedBox(height: 50),
             const Text(
@@ -185,11 +196,11 @@ class HomePage extends StatelessWidget {
                 color: Colors.green,
               ),
               title:
-              const Text("Transparency: ", style: TextStyle(fontSize: 17)),
+                  const Text("Transparency: ", style: TextStyle(fontSize: 17)),
               subtitle: const Text(
                   "We are committed to transparency and accountability in "
-                      "all our operations. Donors can trust that their contributions are making a "
-                      "tangible difference in the lives of those we serve."),
+                  "all our operations. Donors can trust that their contributions are making a "
+                  "tangible difference in the lives of those we serve."),
             ),
             ListTile(
               leading: Container(
@@ -201,8 +212,8 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(fontSize: 17)),
               subtitle: const Text(
                   "We understand that each community has unique needs and challenges. "
-                      "That's why we work closely with donors to tailor our projects to specific "
-                      "instructions, ensuring that their generosity has a direct and meaningful impact."),
+                  "That's why we work closely with donors to tailor our projects to specific "
+                  "instructions, ensuring that their generosity has a direct and meaningful impact."),
             ),
             ListTile(
               leading: Container(
@@ -214,8 +225,8 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(fontSize: 17)),
               subtitle: const Text(
                   "We prioritize sustainable solutions that create lasting change. "
-                      "By investing in education, infrastructure, and capacity building, we empower "
-                      "communities to break the cycle of poverty and build a better future for generations to come"),
+                  "By investing in education, infrastructure, and capacity building, we empower "
+                  "communities to break the cycle of poverty and build a better future for generations to come"),
             ),
             const SizedBox(height: 40),
             const Text(
@@ -227,8 +238,8 @@ class HomePage extends StatelessWidget {
               width: 300,
               child: Text(
                 'Together, we can create a world where compassion knows no '
-                    'bounds and every individual has the opportunity to thrive. '
-                    'Join us in our mission to make a difference, one donation at a time.',
+                'bounds and every individual has the opportunity to thrive. '
+                'Join us in our mission to make a difference, one donation at a time.',
                 style: TextStyle(fontSize: 15),
                 textAlign: TextAlign.center,
               ),
@@ -250,7 +261,9 @@ class HomePage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text("Big or small, your donations can make a significant impact for those who need it most.", style: TextStyle(fontSize: 12, color: Colors.red)),
+            const Text(
+                "Big or small, your donations can make a significant impact for those who need it most.",
+                style: TextStyle(fontSize: 12, color: Colors.red)),
             SizedBox(height: MediaQuery.of(context).size.height * 0.1),
             ListTile(
               title: const Text(
@@ -261,7 +274,8 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutUs()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const AboutUs()));
               },
             ),
             // ListTile(
@@ -285,7 +299,8 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => ContactUs()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ContactUs()));
               },
             ),
             const SizedBox(height: 20.0),
@@ -303,4 +318,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-

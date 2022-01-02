@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../data/ContentData.dart';
 import 'DonationCategoryButton.dart';
 
 class DonationHomePage extends StatelessWidget {
@@ -7,22 +8,13 @@ class DonationHomePage extends StatelessWidget {
     'Education and empowerment',
     'Sick and handicapped',
     'Housing, Feeding and clothing',
-    'Pregnant and nursing mothers',
+    'Pregnant women, nursing mothers and widows',
     'Prisoners',
     "Growth and Development"
   ];
 
-  String? categoryLoop() {
-    String? index;
-    for (int i = 0; i < category.length; i++) {
-      index = category[i];
-    }
-    return index;
-  }
-
   @override
   Widget build(BuildContext context) {
-    categoryLoop();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Select Donation Category'),
@@ -33,26 +25,26 @@ class DonationHomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             DonationCategoryButton(
-              categoryName: category[0],
-            ),
+                categoryName: category[0],
+                description: donationCategoryDescription[0]),
             DonationCategoryButton(
-              categoryName: category[1],
-            ),
+                categoryName: category[1],
+                description: donationCategoryDescription[1]),
             DonationCategoryButton(
-              categoryName: category[2],
-            ),
+                categoryName: category[2],
+                description: donationCategoryDescription[2]),
             DonationCategoryButton(
-              categoryName: category[3],
-            ),
+                categoryName: category[3],
+                description: donationCategoryDescription[3]),
             DonationCategoryButton(
-              categoryName: category[4],
-            ),
+                categoryName: category[4],
+                description: donationCategoryDescription[4]),
             DonationCategoryButton(
-              categoryName: category[5],
-            ),
+                categoryName: category[5],
+                description: donationCategoryDescription[5]),
             DonationCategoryButton(
-              categoryName: category[6],
-            ),
+                categoryName: category[6],
+                description: donationCategoryDescription[6]),
           ],
         ),
       ),
