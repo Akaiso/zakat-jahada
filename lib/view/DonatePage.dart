@@ -25,62 +25,46 @@ class _DonatePageState extends State<DonatePage> {
   XFile? _image;
   final picker = ImagePicker();
 
-  Widget _buildImage() {
-    if (_image == null) {
-      return const Padding(
-        padding: EdgeInsets.fromLTRB(1, 1, 1, 1),
-        child: Icon(
-          Icons.add,
-          color: Colors.grey,
-        ),
-      );
-    } else {
-      return Text(_image!.path);
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            AppBar(
-                title: Text(
-                  "Donate to ${widget.categoryButton.categoryName} ",
-                  style: TextStyle(fontSize: 20),
-                ),
-                centerTitle: true),
-            const SizedBox(height: 40),
-            Center(
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    SingleChildScrollView(
-                      scrollDirection: Axis.vertical,
-                      child: Column(
-                        children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width * 0.5,
-                            child: Text(
-                              widget.categoryButton.description,
-                              style: const TextStyle(
-                                  color: Colors.black87, fontSize: 13),
-                              textAlign: TextAlign.right,
-                            ),
-                          ),
-                        ],
-                      ),
+    return Material(
+      child: Scaffold(
+        appBar: AppBar(
+            title: Text(
+              "Donate to ${widget.categoryButton.categoryName} ",
+              style: TextStyle(fontSize: 20),
+            ),
+            centerTitle: true),
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const SizedBox(height: 40),
+              Wrap(direction: Axis.horizontal,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.4,
+                    padding: const EdgeInsets.all(20.0),
+                    child: Column(
+                      children: [
+                        Text(
+                          widget.categoryButton.description,
+                          style: const TextStyle(
+                              color: Colors.black87, fontSize: 13),
+                          textAlign: TextAlign.right,
+                        ),
+                      ],
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 30),
-                      height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width * 0.4,
-                      child: Form(
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+                    //height: MediaQuery.of(context).size.height * 1,
+                    width: MediaQuery.of(context).size.width * 0.6,
+                    child: Form(
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.vertical,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
@@ -231,12 +215,12 @@ class _DonatePageState extends State<DonatePage> {
                           ],
                         ),
                       ),
-                    )
-                  ],
-                ),
+                    ),
+                  )
+                ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

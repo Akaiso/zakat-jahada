@@ -15,37 +15,42 @@ class DonationHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Select Donation Category'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            DonationCategoryButton(
-                categoryName: category[0],
-                description: donationCategoryDescription[0]),
-            DonationCategoryButton(
-                categoryName: category[1],
-                description: donationCategoryDescription[1]),
-            DonationCategoryButton(
-                categoryName: category[2],
-                description: donationCategoryDescription[2]),
-            DonationCategoryButton(
-                categoryName: category[3],
-                description: donationCategoryDescription[3]),
-            DonationCategoryButton(
-                categoryName: category[4],
-                description: donationCategoryDescription[4]),
-            DonationCategoryButton(
-                categoryName: category[5],
-                description: donationCategoryDescription[5]),
-            DonationCategoryButton(
-                categoryName: category[6],
-                description: donationCategoryDescription[6]),
-          ],
+    return Material(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Select Donation Category'),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(40.0),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                DonationCategoryButton(
+                    categoryName: category[0],
+                    description: donationCategoryDescription[0]),
+                DonationCategoryButton(
+                    categoryName: category[1],
+                    description: donationCategoryDescription[1]),
+                DonationCategoryButton(
+                    categoryName: category[2],
+                    description: donationCategoryDescription[2]),
+                DonationCategoryButton(
+                    categoryName: category[3],
+                    description: donationCategoryDescription[3]),
+                DonationCategoryButton(
+                    categoryName: category[4],
+                    description: donationCategoryDescription[4]),
+                DonationCategoryButton(
+                    categoryName: category[5],
+                    description: donationCategoryDescription[5]),
+                DonationCategoryButton(
+                    categoryName: category[6],
+                    description: donationCategoryDescription[6]),
+              ],
+            ),
+          ),
         ),
       ),
     );
