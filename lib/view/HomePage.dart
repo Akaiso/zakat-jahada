@@ -61,75 +61,78 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 50),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  SizedBox(
-                    height: 300,
-                    width: 400,
-                    child: Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            AutoSizeText("Our Vision",
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 28.0),
+                child: Wrap(
+                  direction: Axis.horizontal,
+                  children: [
+                    SizedBox(
+                      height: 300,
+                      width: MediaQuery.of(context).size.width * 0.6,
+                      child: Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              AutoSizeText("Our Vision",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold, fontSize: 25),
+                                  minFontSize: 15,
+                                  textAlign: TextAlign.center),
+                              SizedBox(height: 10),
+                              AutoSizeText(
+                                "We envision a world "
+                                "where every individual has access to basic necessities,"
+                                " opportunities for growth, and the means to achieve their full "
+                                "potential. We believe in the power of collective generosity to "
+                                "transform lives and communities.",
                                 style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 25),
+                                    fontSize: 17, color: Colors.black54),
                                 minFontSize: 15,
-                                textAlign: TextAlign.center),
-                            SizedBox(height: 10),
-                            AutoSizeText(
-                              "We envision a world "
-                              "where every individual has access to basic necessities,"
-                              " opportunities for growth, and the means to achieve their full "
-                              "potential. We believe in the power of collective generosity to "
-                              "transform lives and communities.",
-                              style: TextStyle(
-                                  fontSize: 17, color: Colors.black54),
-                              minFontSize: 15,
-                              textAlign: TextAlign.center,
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 8,
-                            )
-                          ],
+                                textAlign: TextAlign.center,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 8,
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  const SizedBox(width: 100),
-                  SizedBox(
-                    height: 300,
-                    width: 400,
-                    child: Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            AutoSizeText("Our Mission ",
+                    const SizedBox(width: 100),
+                    SizedBox(
+                      height: 300,
+                      width: MediaQuery.of(context).size.width * 0.6,
+                      child: Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              AutoSizeText("Our Mission ",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold, fontSize: 25),
+                                  minFontSize: 15,
+                                  textAlign: TextAlign.center),
+                              SizedBox(height: 10),
+                              AutoSizeText(
+                                'Our mission is to facilitate impactful and transparent '
+                                'giving by poviding an easy to navigate platform , connecting donors with meaningful projects that address '
+                                'pressing social needs. Through collaborative efforts, we strive to: Alleviate Hunger, build sustainable housing, empowerment, foster digital inclusion',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 25),
+                                    color: Colors.black54, fontSize: 17),
                                 minFontSize: 15,
-                                textAlign: TextAlign.center),
-                            SizedBox(height: 10),
-                            AutoSizeText(
-                              'Our mission is to facilitate impactful and transparent '
-                              'giving by poviding an easy to navigate platform , connecting donors with meaningful projects that address '
-                              'pressing social needs. Through collaborative efforts, we strive to: Alleviate Hunger, build sustainable housing, empowerment, foster digital inclusion',
-                              style: TextStyle(
-                                  color: Colors.black54, fontSize: 17),
-                              minFontSize: 15,
-                              textAlign: TextAlign.center,
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 8,
-                            )
-                          ],
+                                textAlign: TextAlign.center,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 8,
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 50),
