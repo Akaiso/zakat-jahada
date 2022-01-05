@@ -45,7 +45,7 @@ class _DonatePageState extends State<DonatePage> {
               Wrap(direction: Axis.horizontal,
                 children: [
                   Container(
-                    width: MediaQuery.of(context).size.width * 0.4,
+                    width: MediaQuery.of(context).size.width <800 ?  MediaQuery.of(context).size.width : MediaQuery.of(context).size.width * 0.4,
                     padding: const EdgeInsets.all(20.0),
                     child: Column(
                       children: [
@@ -59,9 +59,9 @@ class _DonatePageState extends State<DonatePage> {
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
                     //height: MediaQuery.of(context).size.height * 1,
-                    width: MediaQuery.of(context).size.width * 0.6,
+                    width: MediaQuery.of(context).size.width < 800 ?  MediaQuery.of(context).size.width : MediaQuery.of(context).size.width * 0.6,
                     child: Form(
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,

@@ -21,18 +21,20 @@ class _ContactUsState extends State<ContactUs> {
         appBar: AppBar(
           title: const Text("Contact Us"),
         ),
-        body: Center(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 30),
-              child: Center(
-                child: Wrap(
-                  direction: Axis.horizontal,
-                  children: [
-                    SizedBox(
-                     // height: MediaQuery.of(context).size.height,
-                      width: MediaQuery.of(context).size.width * 0.5,
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Container(height: 30),
+              Wrap(
+                direction: Axis.horizontal,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30),
+                    child: Container(
+                      width: MediaQuery.of(context).size.width < 800
+                          ? MediaQuery.of(context).size.width
+                          : MediaQuery.of(context).size.width * 0.5,
                       child: Form(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +49,8 @@ class _ContactUsState extends State<ContactUs> {
                             ),
                             const SizedBox(height: 10),
                             const Text("* no field is optional",
-                                style: TextStyle(color: Colors.red, fontSize: 12)),
+                                style: TextStyle(
+                                    color: Colors.red, fontSize: 12)),
                             textField(controllerName, "name", 35, 1),
                             const SizedBox(
                               height: 10,
@@ -56,7 +59,8 @@ class _ContactUsState extends State<ContactUs> {
                             const SizedBox(height: 10),
                             const Text(
                               "message",
-                              style: TextStyle(fontSize: 12, color: Colors.black54),
+                              style: TextStyle(
+                                  fontSize: 12, color: Colors.black54),
                               textAlign: TextAlign.justify,
                             ),
                             textField(controllerMessage, "", 80, 5),
@@ -73,7 +77,8 @@ class _ContactUsState extends State<ContactUs> {
                                           feedback = "Field(s) empty";
                                         }
                                         if (controllerName.text.isNotEmpty &&
-                                            controllerMessage.text.isNotEmpty &&
+                                            controllerMessage
+                                                .text.isNotEmpty &&
                                             controllerName.text.isNotEmpty) {
                                           controllerName.clear();
                                           controllerMessage.clear();
@@ -86,7 +91,8 @@ class _ContactUsState extends State<ContactUs> {
                                     },
                                     style: ButtonStyle(
                                       backgroundColor:
-                                          MaterialStateProperty.all(Colors.green),
+                                          MaterialStateProperty.all(
+                                              Colors.green),
                                     ),
                                     child: Text(feedback),
                                   ),
@@ -105,21 +111,25 @@ class _ContactUsState extends State<ContactUs> {
                         ),
                       ),
                     ),
-                    const SizedBox(width: 100),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.3,
-                      child: Card(
-                        elevation: 20.0,
-                        child: Image.asset(
-                          "assets/images/helpingHand.png",
-                          fit: BoxFit.cover,
-                        ),
+                  ),
+                  const SizedBox(width: 80),
+                  const SizedBox(height: 100),
+                  Container(
+                    width: MediaQuery.of(context).size.width < 800
+                        ? MediaQuery.of(context).size.width
+                        : MediaQuery.of(context).size.width * 0.3,
+                   // height: MediaQuery.of(context).size.height * 0.7,
+                    child: Card(
+                      elevation: 20.0,
+                      child: Image.asset(
+                        "assets/images/helpingHand.png",
+                        fit: BoxFit.cover,
                       ),
-                    )
-                  ],
-                ),
+                    ),
+                  )
+                ],
               ),
-            ),
+            ],
           ),
         ),
       ),
