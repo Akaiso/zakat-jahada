@@ -9,9 +9,35 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Zakat Jahada'),
-        leading:
-            SizedBox(height: 20, width: 20, child: Icon(Icons.mosque_rounded)),
+        title: Row(
+          children: const [
+            Icon(Icons.mosque_rounded),
+            SizedBox(width: 10),
+            Text('Zakat Jahada')
+          ],
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DonationHomePage()));
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.red),
+
+                padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
+              ),
+              child: const Text(
+                "DONATE HERE",textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 15),
+              ),
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -28,16 +54,16 @@ class HomePage extends StatelessWidget {
                     'assets/images/zakat-banner-1.png',width: MediaQuery.of(context).size.width,
                     fit: BoxFit.cover,
                   )),
-                  const Positioned(top: 130,
+                   Positioned(top: 130,
                       left: 20,
                       child: CircleAvatar(
-                        radius: 102,
+                        radius: MediaQuery.of(context).size.width < 800 ? 52: 102,
                         foregroundColor: Colors.white,
                         backgroundColor: Colors.white,
                         child: CircleAvatar(
                           foregroundColor: Colors.white,
                           backgroundColor: Colors.white,
-                          radius: 100,
+                          radius: MediaQuery.of(context).size.width < 800 ? 52: 100,
                           foregroundImage: AssetImage("assets/images/ramadan.png"),
                         ),
                       )),
@@ -252,7 +278,7 @@ class HomePage extends StatelessWidget {
                 padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
               ),
               child: const Text(
-                "CLICK HERE TO DONATE NOW",
+                "CLICK HERE TO DONATE NOW",textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 25),
               ),
             ),

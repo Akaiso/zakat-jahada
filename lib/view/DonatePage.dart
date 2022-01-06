@@ -86,10 +86,11 @@ class _DonatePageState extends State<DonatePage> {
                                   fontSize: 15, color: Colors.black54),
                             ),
                             const SizedBox(height: 10),
-                            const Text(
-                              "1qWLpH1zLRcayV7uCKtDZbu8TNXhu3e2R",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.w600),
+                            const SelectableText(textAlign: TextAlign.center,
+                                "1qWLpH1zLRcayV7uCKtDZbu8TNXhu3e2R",
+
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.w600),
                             ),
                             const SizedBox(height: 20),
                             SizedBox(
@@ -115,7 +116,7 @@ class _DonatePageState extends State<DonatePage> {
                                       border: OutlineInputBorder(
                                           borderRadius:
                                               BorderRadius.circular(10)),
-                                      labelText: "email: (optional) ",
+                                      labelText: "email (optional) ",
                                       labelStyle:
                                           const TextStyle(fontSize: 12)),
                                 )),
@@ -129,7 +130,7 @@ class _DonatePageState extends State<DonatePage> {
                                       border: OutlineInputBorder(
                                           borderRadius:
                                               BorderRadius.circular(10)),
-                                      labelText: "Amount donated ",
+                                      labelText: "Amount donated (optional) ",
                                       labelStyle:
                                           const TextStyle(fontSize: 12)),
                                 )),
@@ -144,7 +145,7 @@ class _DonatePageState extends State<DonatePage> {
                                           borderRadius:
                                               BorderRadius.circular(10)),
                                       labelText:
-                                          "Donation category e.g Housing & Shelter ",
+                                          "Donation category e.g Housing & Shelter (optional)",
                                       labelStyle:
                                           const TextStyle(fontSize: 12)),
                                 )),
@@ -197,11 +198,12 @@ class _DonatePageState extends State<DonatePage> {
                                         controller3.clear();
                                         controller4.clear();
                                       } else {
-                                        submitStatus = "SELECT IMAGE";
+                                        submitStatus = "UPLOAD RECEIPT";
                                       }
                                     });
                                   },
                                   style: ButtonStyle(
+                                    foregroundColor: MaterialStateProperty.all(Colors.white),
                                     backgroundColor:
                                         MaterialStateProperty.all(Colors.green),
                                   ),

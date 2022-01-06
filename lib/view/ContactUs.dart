@@ -85,7 +85,7 @@ class _ContactUsState extends State<ContactUs> {
                                           controllerEmail.clear();
                                           feedback = "DONE";
                                           attached =
-                                              "Thank you for reaching out to us, our support team will respond soon";
+                                              "Thank you for reaching out, the support team will respond accordingly";
                                         }
                                       });
                                     },
