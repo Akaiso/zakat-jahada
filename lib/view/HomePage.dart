@@ -28,8 +28,7 @@ class HomePage extends StatelessWidget {
               },
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.red),
-
-                padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
+                foregroundColor: MaterialStateProperty.all( Colors.white),               padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
               ),
               child: const Text(
                 "DONATE HERE",textAlign: TextAlign.center,
