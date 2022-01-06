@@ -25,7 +25,6 @@ class _DonatePageState extends State<DonatePage> {
   XFile? _image;
   final picker = ImagePicker();
 
-
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -42,10 +41,13 @@ class _DonatePageState extends State<DonatePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(height: 40),
-              Wrap(direction: Axis.horizontal,
+              Wrap(
+                direction: Axis.horizontal,
                 children: [
                   Container(
-                    width: MediaQuery.of(context).size.width <800 ?  MediaQuery.of(context).size.width : MediaQuery.of(context).size.width * 0.4,
+                    width: MediaQuery.of(context).size.width < 800
+                        ? MediaQuery.of(context).size.width
+                        : MediaQuery.of(context).size.width * 0.4,
                     padding: const EdgeInsets.all(20.0),
                     child: Column(
                       children: [
@@ -59,9 +61,12 @@ class _DonatePageState extends State<DonatePage> {
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 40, vertical: 40),
                     //height: MediaQuery.of(context).size.height * 1,
-                    width: MediaQuery.of(context).size.width < 800 ?  MediaQuery.of(context).size.width : MediaQuery.of(context).size.width * 0.6,
+                    width: MediaQuery.of(context).size.width < 800
+                        ? MediaQuery.of(context).size.width
+                        : MediaQuery.of(context).size.width * 0.6,
                     child: Form(
                       child: SingleChildScrollView(
                         scrollDirection: Axis.vertical,
@@ -86,11 +91,11 @@ class _DonatePageState extends State<DonatePage> {
                                   fontSize: 15, color: Colors.black54),
                             ),
                             const SizedBox(height: 10),
-                            const SelectableText(textAlign: TextAlign.center,
-                                "1qWLpH1zLRcayV7uCKtDZbu8TNXhu3e2R",
-
-                                style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.w600),
+                            const SelectableText(
+                              textAlign: TextAlign.center,
+                              "1qWLpH1zLRcayV7uCKtDZbu8TNXhu3e2R",
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w600),
                             ),
                             const SizedBox(height: 20),
                             SizedBox(
@@ -149,7 +154,6 @@ class _DonatePageState extends State<DonatePage> {
                                       labelStyle:
                                           const TextStyle(fontSize: 12)),
                                 )),
-
                             const SizedBox(height: 20),
                             OutlinedButton(
                               child: SizedBox(
@@ -203,7 +207,8 @@ class _DonatePageState extends State<DonatePage> {
                                     });
                                   },
                                   style: ButtonStyle(
-                                    foregroundColor: MaterialStateProperty.all(Colors.white),
+                                    foregroundColor:
+                                        MaterialStateProperty.all(Colors.white),
                                     backgroundColor:
                                         MaterialStateProperty.all(Colors.green),
                                   ),

@@ -117,7 +117,7 @@ class _ContactUsState extends State<ContactUs> {
                                           MaterialStateProperty.all(
                                               Colors.green),
                                     ),
-                                    child: Text(feedback),
+                                    child: Text(feedback, style: TextStyle(color: Colors.white),),
                                   ),
                                 ),
                                 const SizedBox(width: 20),

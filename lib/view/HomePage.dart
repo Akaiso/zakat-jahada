@@ -19,20 +19,22 @@ class HomePage extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => DonationHomePage()));
-              },
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.green),
-                foregroundColor: MaterialStateProperty.all( Colors.white),               padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
-              ),
-              child: const Text(
-                "DONATE HERE",textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 15),
+            child: Material(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DonationHomePage()));
+                },
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.green),
+                  foregroundColor: MaterialStateProperty.all( Colors.white),               padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
+                ),
+                child: const Text(
+                  "DONATE HERE",textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 15),
+                ),
               ),
             ),
           ),
