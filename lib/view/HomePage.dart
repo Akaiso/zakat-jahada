@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                         builder: (context) => DonationHomePage()));
               },
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.red),
+                backgroundColor: MaterialStateProperty.all(Colors.green),
                 foregroundColor: MaterialStateProperty.all( Colors.white),               padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
               ),
               child: const Text(
@@ -274,6 +274,8 @@ class HomePage extends StatelessWidget {
                         builder: (context) => DonationHomePage()));
               },
               style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.green),
+                foregroundColor: MaterialStateProperty.all(Colors.white),
                 padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
               ),
               child: const Text(
@@ -286,12 +288,23 @@ class HomePage extends StatelessWidget {
                 "Big or small, your donations can make a significant impact for those who need it most.",
                 style: TextStyle(fontSize: 12, color: Colors.red)),
             SizedBox(height: MediaQuery.of(context).size.height * 0.1),
-            ListTile(
-              title: const Text(
-                'About Us',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
+            InkWell(
+              overlayColor: MaterialStateProperty.all(Colors.transparent),
+              child: Container(
+                decoration: BoxDecoration(
+                  //color: Colors.red,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(width: 2, color: Colors.green),
+                ),
+
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                child: const Text(
+                  'About Us',
+                  style: TextStyle(
+                    color: Colors.green,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               onTap: () {
@@ -299,6 +312,7 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const AboutUs()));
               },
             ),
+            SizedBox(height: 12),
             // ListTile(
             //   title: const Text(
             //     'Projects',
@@ -311,12 +325,23 @@ class HomePage extends StatelessWidget {
             //     // Navigate to Projects page
             //   },
             // ),
-            ListTile(
-              title: const Text(
-                'Contact Us',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
+            InkWell(
+              overlayColor: MaterialStateProperty.all(Colors.transparent),
+              child: Container(
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(width: 2, color: Colors.green),
+                ),
+
+                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                child: const Text(
+                  'Contact Us',
+                  style: TextStyle(
+                    color: Colors.green,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               onTap: () {
@@ -324,7 +349,7 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => ContactUs()));
               },
             ),
-            const SizedBox(height: 20.0),
+            const SizedBox(height: 30.0),
             Container(
               color: Colors.grey[200],
               padding: const EdgeInsets.all(16.0),

@@ -94,7 +94,7 @@ class _DonatePageState extends State<DonatePage> {
                             ),
                             const SizedBox(height: 20),
                             SizedBox(
-                                height: 35,
+                                height: 38,
                                 child: TextFormField(
                                   controller: controller1,
                                   decoration: InputDecoration(
@@ -108,7 +108,7 @@ class _DonatePageState extends State<DonatePage> {
                                 )),
                             const SizedBox(height: 10),
                             SizedBox(
-                                height: 35,
+                                height: 38,
                                 child: TextFormField(
                                   controller: controller2,
                                   decoration: InputDecoration(
@@ -122,7 +122,7 @@ class _DonatePageState extends State<DonatePage> {
                                 )),
                             const SizedBox(height: 10),
                             SizedBox(
-                                height: 35,
+                                height: 38,
                                 child: TextFormField(
                                   controller: controller3,
                                   decoration: InputDecoration(
@@ -136,7 +136,7 @@ class _DonatePageState extends State<DonatePage> {
                                 )),
                             const SizedBox(height: 10),
                             SizedBox(
-                                height: 35,
+                                height: 38,
                                 child: TextFormField(
                                   controller: controller4,
                                   decoration: InputDecoration(
@@ -149,8 +149,8 @@ class _DonatePageState extends State<DonatePage> {
                                       labelStyle:
                                           const TextStyle(fontSize: 12)),
                                 )),
-                            const SizedBox(height: 10),
-                            const SizedBox(height: 10),
+
+                            const SizedBox(height: 20),
                             OutlinedButton(
                               child: SizedBox(
                                 height: 35,

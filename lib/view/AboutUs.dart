@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zakat_jahada/view/ContactUs.dart';
 
+import 'DonationHomePage.dart';
+
 class AboutUs extends StatelessWidget {
   const AboutUs({Key? key}) : super(key: key);
 
@@ -9,6 +11,27 @@ class AboutUs extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("About Us"),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DonationHomePage()));
+              },
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.green),
+                foregroundColor: MaterialStateProperty.all( Colors.white),               padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
+              ),
+              child: const Text(
+                "DONATE HERE",textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 15),
+              ),
+            ),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'DonationHomePage.dart';
+
 class ContactUs extends StatefulWidget {
   const ContactUs({Key? key}) : super(key: key);
 
@@ -20,6 +22,27 @@ class _ContactUsState extends State<ContactUs> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text("Contact Us"),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DonationHomePage()));
+                },
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.green),
+                  foregroundColor: MaterialStateProperty.all( Colors.white),               padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
+                ),
+                child: const Text(
+                  "DONATE HERE",textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 15),
+                ),
+              ),
+            ),
+          ],
         ),
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -51,11 +74,11 @@ class _ContactUsState extends State<ContactUs> {
                             const Text("* no field is optional",
                                 style: TextStyle(
                                     color: Colors.red, fontSize: 12)),
-                            textField(controllerName, "name", 35, 1),
+                            textField(controllerName, "name", 38, 1),
                             const SizedBox(
                               height: 10,
                             ),
-                            textField(controllerEmail, "e-mail", 35, 1),
+                            textField(controllerEmail, "e-mail", 38, 1),
                             const SizedBox(height: 10),
                             const Text(
                               "message",
