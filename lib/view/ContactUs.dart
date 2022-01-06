@@ -38,7 +38,7 @@ class _ContactUsState extends State<ContactUs> {
                   ),
                 )
             ),
-            const SizedBox(width: 30)
+            const SizedBox(width: 10)
           ],
         ),
         body: SingleChildScrollView(

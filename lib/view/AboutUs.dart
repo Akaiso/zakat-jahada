@@ -27,7 +27,7 @@ class AboutUs extends StatelessWidget {
                 ),
               )
           ),
-          SizedBox(width: 30)
+          SizedBox(width: 10)
         ],
       ),
       body: SingleChildScrollView(
