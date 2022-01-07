@@ -60,12 +60,13 @@ class _ContactUsState extends State<ContactUs> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            const Text(
-                              "Thank you for considering being a part of this cause! Whether you have questions about"
-                              " our mission, want to learn more about our projects, or need assistance with "
-                              "your donation, we're here to help. Please feel free to reach out to us using "
-                              "the contact information provided below.",
-                              style: TextStyle(fontSize: 14),
+                            const SelectableText(
+                                "Thank you for considering being a part of this cause! Whether you have questions about"
+                                " our mission, want to learn more about our projects, or need assistance with "
+                                "your donation, we're here to help. Please feel free to reach out to us using "
+                                "the contact information provided below or send us a mail \" zakat_jahada@outlook.com \" ",
+                                style: TextStyle(fontSize: 14),
+
                             ),
                             const SizedBox(height: 10),
                             const Text("* no field is optional",
@@ -105,7 +106,7 @@ class _ContactUsState extends State<ContactUs> {
                                           controllerEmail.clear();
                                           feedback = "DONE";
                                           attached =
-                                              "Thank you for reaching out, the support team will respond accordingly";
+                                              "Thank you for reaching out";
                                         }
                                       });
                                     },
