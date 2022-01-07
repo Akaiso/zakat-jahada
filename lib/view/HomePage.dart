@@ -6,7 +6,7 @@ import 'AboutUs.dart';
 import 'DonationHomePage.dart';
 
 class HomePage extends StatefulWidget {
-  List<Widget> items = [
+  List<Widget> items = const [
     Text(" “One who pays Zakat, Allah will make their wealth increase” (Sahih Bukhari)", textAlign: TextAlign.center, style: TextStyle(fontSize: 18),),
     Text("“The best charity is to pay Zakat on one's wealth” (Sahih Muslim)", textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
     Text("“Zakat is a right that the poor have upon the rich” (Sahih Bukhari)", textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
