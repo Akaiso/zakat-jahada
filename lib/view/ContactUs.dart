@@ -24,24 +24,21 @@ class _ContactUsState extends State<ContactUs> {
           title: const Text("Contact Us"),
           actions: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => DonationHomePage()));
-                },
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.green),
-                  foregroundColor: MaterialStateProperty.all( Colors.white),               padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
-                ),
-                child: const Text(
-                  "DONATE HERE",textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 15),
-                ),
-              ),
+                padding: const EdgeInsets.all(8.0),
+                child:
+                MaterialButton(
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => DonationHomePage()));
+                  },
+                  color: Colors.green,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10.0),
+                    child: Text("DONATE NOW", style: TextStyle(color: Colors.white)),
+                  ),
+                )
             ),
+            const SizedBox(width: 30)
           ],
         ),
         body: SingleChildScrollView(
