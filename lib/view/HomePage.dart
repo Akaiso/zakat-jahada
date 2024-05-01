@@ -2,21 +2,42 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:zakat_jahada/view/ContactUs.dart';
+
 import 'AboutUs.dart';
 import 'DonationHomePage.dart';
 
 class HomePage extends StatefulWidget {
   List<Widget> items = const [
-    Text(" “One who pays Zakat, Allah will make their wealth increase” (Sahih Bukhari)", textAlign: TextAlign.center, style: TextStyle(fontSize: 18),),
-    Text("“The best charity is to pay Zakat on one's wealth” (Sahih Muslim)", textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
-    Text("“Zakat is a right that the poor have upon the rich” (Sahih Bukhari)", textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
-    Text("“Giving Zakat is more beloved to Allah than giving in charity during the entire year” (Sahih Bukhari)", textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
-    Text("“Zakat purifies one’s wealth” (Sahih Bukhari)", textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
-    Text("“The wealth of a person does not decrease by paying Zakat” (Sahih Bukhari)", textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
-    Text("“Zakat is a form of worship, and the one who fulfills it will be rewarded” (Sahih Muslim)", textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
-    Text("“The one who pays Zakat, it is as if they have freed a slave” (Sahih Bukhari)", textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
-
+    Text(
+      " “One who pays Zakat, Allah will make their wealth increase” (Sahih Bukhari)",
+      textAlign: TextAlign.center,
+      style: TextStyle(fontSize: 18),
+    ),
+    Text("“The best charity is to pay Zakat on one's wealth” (Sahih Muslim)",
+        textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
+    Text("“Zakat is a right that the poor have upon the rich” (Sahih Bukhari)",
+        textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
+    Text(
+        "“Giving Zakat is more beloved to Allah than giving in charity during the entire year” (Sahih Bukhari)",
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 18)),
+    Text("“Zakat purifies one’s wealth” (Sahih Bukhari)",
+        textAlign: TextAlign.center, style: TextStyle(fontSize: 18)),
+    Text(
+        "“The wealth of a person does not decrease by paying Zakat” (Sahih Bukhari)",
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 18)),
+    Text(
+        "“Zakat is a form of worship, and the one who fulfills it will be rewarded” (Sahih Muslim)",
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 18)),
+    Text(
+        "“The one who pays Zakat, it is as if they have freed a slave” (Sahih Bukhari)",
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 18)),
   ];
+
+  HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -27,8 +48,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: const [
+        title: const Row(
+          children: [
             Icon(Icons.mosque_rounded),
             SizedBox(width: 10),
             Text('Zakat Jahada')
@@ -36,21 +57,24 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.all(8.0),
-            child:
-              MaterialButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => DonationHomePage()));
+              padding: const EdgeInsets.all(8.0),
+              child: MaterialButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DonationHomePage()));
                 },
                 color: Colors.green,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
                 child: const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 10.0),
-                  child: Text("DONATE NOW", style: TextStyle(color: Colors.white)),
+                  child:
+                      Text("DONATE NOW", style: TextStyle(color: Colors.white)),
                 ),
-              )
-          ),
-          SizedBox(width: 10)
+              )),
+          const SizedBox(width: 10)
         ],
       ),
       body: SingleChildScrollView(
@@ -62,32 +86,38 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.5,
                 width: MediaQuery.of(context).size.width,
-                child: Stack(clipBehavior: Clip.none,
-
+                child: Stack(
+                  clipBehavior: Clip.none,
                   children: [
                     Positioned(
                         child: Image.asset(
-                      'assets/images/zakat-banner-1.png',width: MediaQuery.of(context).size.width,
+                      'assets/images/zakat-banner-1.png',
+                      width: MediaQuery.of(context).size.width,
                       fit: BoxFit.cover,
                     )),
-                     Positioned(top: 130,
+                    Positioned(
+                        top: 130,
                         left: 20,
                         child: CircleAvatar(
-                          radius: MediaQuery.of(context).size.width < 800 ? 52: 102,
+                          radius: MediaQuery.of(context).size.width < 800
+                              ? 52
+                              : 102,
                           foregroundColor: Colors.white,
                           backgroundColor: Colors.white,
                           child: CircleAvatar(
                             foregroundColor: Colors.white,
                             backgroundColor: Colors.white,
-                            radius: MediaQuery.of(context).size.width < 800 ? 52: 100,
-                            foregroundImage: AssetImage("assets/images/ramadan.png"),
+                            radius: MediaQuery.of(context).size.width < 800
+                                ? 52
+                                : 100,
+                            foregroundImage:
+                                const AssetImage("assets/images/ramadan.png"),
                           ),
                         )),
-
                   ],
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               const Padding(
                 padding: EdgeInsets.all(16.0),
                 child: Text(
@@ -99,24 +129,26 @@ class _HomePageState extends State<HomePage> {
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(height: 40),
-              CarouselSlider(items: widget.items, options: CarouselOptions(
-                height: 100,
-                aspectRatio: 16 / 9,
-                viewportFraction: 0.8,
-                initialPage: 0,
-                enableInfiniteScroll: true,
-                reverse: false,
-                autoPlay: true,
-                autoPlayInterval: const Duration(seconds: 5),
-                autoPlayAnimationDuration:
-                const Duration(milliseconds: 800),
-                autoPlayCurve: Curves.fastOutSlowIn,
-                enlargeCenterPage: true,
-                enlargeFactor: 0.3,
-                //onPageChanged: callbackFunction,
-                scrollDirection: Axis.horizontal,
-              )),
+              const SizedBox(height: 40),
+              CarouselSlider(
+                  items: widget.items,
+                  options: CarouselOptions(
+                    height: 100,
+                    aspectRatio: 16 / 9,
+                    viewportFraction: 0.8,
+                    initialPage: 0,
+                    enableInfiniteScroll: true,
+                    reverse: false,
+                    autoPlay: true,
+                    autoPlayInterval: const Duration(seconds: 5),
+                    autoPlayAnimationDuration:
+                        const Duration(milliseconds: 800),
+                    autoPlayCurve: Curves.fastOutSlowIn,
+                    enlargeCenterPage: true,
+                    enlargeFactor: 0.3,
+                    //onPageChanged: callbackFunction,
+                    scrollDirection: Axis.horizontal,
+                  )),
 
               const SizedBox(height: 50),
               Wrap(
@@ -124,13 +156,15 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   SizedBox(
                     height: 300,
-                    width: MediaQuery.of(context).size.width < 800?  MediaQuery.of(context).size.width : MediaQuery.of(context).size.width* 0.4,
-                    child: Card(
+                    width: MediaQuery.of(context).size.width < 800
+                        ? MediaQuery.of(context).size.width
+                        : MediaQuery.of(context).size.width * 0.4,
+                    child: const Card(
                       child: Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: EdgeInsets.all(20.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
+                          children: [
                             AutoSizeText("Our Vision",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 25),
@@ -158,13 +192,15 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(width: 50),
                   SizedBox(
                     height: 300,
-                    width: MediaQuery.of(context).size.width < 800? MediaQuery.of(context).size.width : MediaQuery.of(context).size.width * 0.4,
-                    child: Card(
+                    width: MediaQuery.of(context).size.width < 800
+                        ? MediaQuery.of(context).size.width
+                        : MediaQuery.of(context).size.width * 0.4,
+                    child: const Card(
                       child: Padding(
-                        padding: const EdgeInsets.all(20.0),
+                        padding: EdgeInsets.all(20.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
+                          children: [
                             AutoSizeText("Our Mission ",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 25),
@@ -252,8 +288,8 @@ class _HomePageState extends State<HomePage> {
                   width: 10,
                   color: Colors.green,
                 ),
-                title:
-                    const Text("Transparency: ", style: TextStyle(fontSize: 17)),
+                title: const Text("Transparency: ",
+                    style: TextStyle(fontSize: 17)),
                 subtitle: const Text(
                     "We are committed to transparency and accountability in "
                     "all our operations. Donors can trust that their contributions are making a "
@@ -315,7 +351,8 @@ class _HomePageState extends State<HomePage> {
                   padding: MaterialStateProperty.all(const EdgeInsets.all(20)),
                 ),
                 child: const Text(
-                  "CLICK HERE TO DONATE NOW",textAlign: TextAlign.center,
+                  "CLICK HERE TO DONATE NOW",
+                  textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 25),
                 ),
               ),
@@ -332,8 +369,8 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(width: 2, color: Colors.green),
                   ),
-
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
                   child: const Text(
                     'About Us',
                     style: TextStyle(
@@ -348,7 +385,7 @@ class _HomePageState extends State<HomePage> {
                       MaterialPageRoute(builder: (context) => const AboutUs()));
                 },
               ),
-              SizedBox(height: 12),
+              const SizedBox(height: 12),
               // ListTile(
               //   title: const Text(
               //     'Projects',
@@ -369,8 +406,7 @@ class _HomePageState extends State<HomePage> {
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(width: 2, color: Colors.green),
                   ),
-
-                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
                   child: const Text(
                     'Contact Us',
                     style: TextStyle(
@@ -382,7 +418,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ContactUs()));
+                      MaterialPageRoute(builder: (context) => const ContactUs()));
                 },
               ),
               const SizedBox(height: 30.0),
