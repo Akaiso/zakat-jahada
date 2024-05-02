@@ -9,7 +9,9 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: MediaQuery.of(context).size.width > 500
+        body: Container(
+          child:
+         MediaQuery.of(context).size.width > 500
             ? Column(
           mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -47,15 +49,15 @@ class LandingPage extends StatelessWidget {
                                 builder: (context) => const SignUpPage()));
                       }, "Sign up"),
                     ]),
-              ));
+              )));
   }
 }
 
 Widget accessButton(onPressed, text) {
   return Column(
     children: [
-      ElevatedButton(onPressed: onPressed, child: const Icon(Icons.add)),
-      Text(text, style: const TextStyle(fontWeight: FontWeight.w500),)
+      ElevatedButton(onPressed: onPressed, child: Text(text)),
+      //Text(text, style: const TextStyle(fontWeight: FontWeight.w500),)
     ],
   );
 }
