@@ -11,10 +11,12 @@ void main() async {
           appId: "id",
           messagingSenderId: 'sendid',
           projectId: 'myapp'));
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(

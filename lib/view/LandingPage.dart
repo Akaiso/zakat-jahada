@@ -26,7 +26,7 @@ class LandingPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             accessButton(() {
-                              Get.to( LogInPage(),
+                              Get.to( const LogInPage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500));
                             }, "Log in", Icons.login),
@@ -34,7 +34,7 @@ class LandingPage extends StatelessWidget {
                               width: 55,
                             ),
                             accessButton(() {
-                              Get.to(HomePage(),
+                              Get.to(const HomePage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500),
                                   curve: Curves.easeInOut);
@@ -43,7 +43,7 @@ class LandingPage extends StatelessWidget {
                               width: 55,
                             ),
                             accessButton(() {
-                              Get.to( SignUpPage(),
+                              Get.to( const SignUpPage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500));
                             }, "Sign up", Icons.add),
@@ -57,7 +57,7 @@ class LandingPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             accessButton(() {
-                              Get.to( LogInPage(),
+                              Get.to( const LogInPage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500));
                             }, "Log in", Icons.login),
@@ -65,7 +65,7 @@ class LandingPage extends StatelessWidget {
                               height: 30,
                             ),
                             accessButton(() {
-                              Get.to(HomePage(),
+                              Get.to(const HomePage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500),
                                   curve: Curves.easeInOut);
@@ -74,7 +74,7 @@ class LandingPage extends StatelessWidget {
                               height: 30,
                             ),
                             accessButton(() {
-                              Get.to( SignUpPage(),
+                              Get.to( const SignUpPage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500));
                             }, "Sign up", Icons.add),

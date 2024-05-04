@@ -6,7 +6,7 @@ import 'AboutUs.dart';
 import 'DonationHomePage.dart';
 
 class HomePage extends StatefulWidget {
-  List<Widget> items = const [
+  final List<Widget> items = const [
     Text(
       " “One who pays Zakat, Allah will make their wealth increase” (Sahih Bukhari)",
       textAlign: TextAlign.center,
@@ -36,7 +36,7 @@ class HomePage extends StatefulWidget {
         style: TextStyle(fontSize: 18)),
   ];
 
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();

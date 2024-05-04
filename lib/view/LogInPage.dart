@@ -1,14 +1,18 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:zakat_jahada/view/SignUpPage.dart';
 
 class LogInPage extends StatefulWidget {
+  const LogInPage({super.key});
+
   @override
-  _LogInPageState createState() => _LogInPageState();
+  State<LogInPage> createState() => _LogInPageState();
 }
 
 class _LogInPageState extends State<LogInPage> {
+
+  TextEditingController controller = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   String _email = '';
   String _password = '';
@@ -50,6 +54,7 @@ class _LogInPageState extends State<LogInPage> {
 
   Widget _buildEmailField() {
     return TextFormField(
+      controller: controller,
       decoration: const InputDecoration(
         labelText: 'Email',
         border: OutlineInputBorder(),

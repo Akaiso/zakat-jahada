@@ -6,7 +6,7 @@ class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
 
   @override
-  _SignUpPageState createState() => _SignUpPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
 class _SignUpPageState extends State<SignUpPage> {
@@ -243,7 +243,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return GestureDetector(
       onTap: () {
         // Navigate to login page or perform another action
-        Get.to(LogInPage(),
+        Get.to(const LogInPage(),
             transition: Transition.rightToLeft,
             duration: const Duration(milliseconds: 1500));
       },
