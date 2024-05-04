@@ -26,8 +26,8 @@ class _SignUpPageState extends State<SignUpPage> {
       body: Center(
         child: Padding(
           padding: MediaQuery.of(context).size.width > 500
-              ? const EdgeInsets.symmetric(horizontal: 150.0)
-              : const EdgeInsets.symmetric(horizontal: 50),
+              ? const EdgeInsets.symmetric(horizontal: 150.0, vertical: 20)
+              : const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
           child: SingleChildScrollView(
             child: Form(
               key: _formKey,
