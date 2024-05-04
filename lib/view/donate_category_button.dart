@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'DonatePage.dart';
+import 'donate_page.dart';
 
 class DonationCategoryButton extends StatelessWidget {
   final String categoryName;

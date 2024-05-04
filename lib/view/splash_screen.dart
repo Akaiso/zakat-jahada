@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:zakat_jahada/view/LandingPage.dart';
+import 'package:zakat_jahada/view/landing_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

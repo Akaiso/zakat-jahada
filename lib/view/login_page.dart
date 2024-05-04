@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zakat_jahada/view/SignUpPage.dart';
+import 'package:zakat_jahada/view/signup_page.dart';
 
 class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
@@ -13,8 +13,8 @@ class _LogInPageState extends State<LogInPage> {
 
   TextEditingController controller = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-  String _email = '';
-  String _password = '';
+  String emailx = '';
+  String passwordx = '';
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +69,7 @@ class _LogInPageState extends State<LogInPage> {
         return null;
       },
       onSaved: (value) {
-        _email = value!;
+        emailx = value!;
       },
     );
   }
@@ -89,7 +89,7 @@ class _LogInPageState extends State<LogInPage> {
         return null;
       },
       onSaved: (value) {
-        _password = value!;
+        passwordx = value!;
       },
     );
   }

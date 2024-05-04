@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zakat_jahada/view/LogInPage.dart';
+import 'package:zakat_jahada/view/login_page.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -12,13 +12,13 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPageState extends State<SignUpPage> {
   final _formKey = GlobalKey<FormState>();
   String _email = '';
-  String _confirmEmail = '';
-  String _password = '';
-  String _confirmPassword = '';
-  String _username = '';
-  String _nickname = '';
-  String _firstName = '';
-  String _lastName = '';
+  String confirmEmailx = '';
+  String passwordx = '';
+  String confirmPasswordx = '';
+  String usernamex = '';
+  String nicknamex = '';
+  String firstNamex = '';
+  String lastNamex = '';
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +106,7 @@ class _SignUpPageState extends State<SignUpPage> {
         return null;
       },
       onSaved: (value) {
-        _confirmEmail = value!;
+        confirmEmailx = value!;
       },
     );
   }
@@ -126,7 +126,7 @@ class _SignUpPageState extends State<SignUpPage> {
         return null;
       },
       onSaved: (value) {
-        _password = value!;
+        passwordx = value!;
       },
     );
   }
@@ -142,13 +142,13 @@ class _SignUpPageState extends State<SignUpPage> {
       validator: (value) {
         if (value == null || value.isEmpty) {
           return 'Please confirm your password';
-        } else if (value != _password) {
+        } else if (value != passwordx) {
           return 'Passwords do not match';
         }
         return null;
       },
       onSaved: (value) {
-        _confirmPassword = value!;
+        confirmPasswordx = value!;
       },
     );
   }
@@ -167,7 +167,7 @@ class _SignUpPageState extends State<SignUpPage> {
         return null;
       },
       onSaved: (value) {
-        _username = value!;
+        usernamex = value!;
       },
     );
   }
@@ -186,7 +186,7 @@ class _SignUpPageState extends State<SignUpPage> {
         return null;
       },
       onSaved: (value) {
-        _nickname = value!;
+        nicknamex = value!;
       },
     );
   }
@@ -205,7 +205,7 @@ class _SignUpPageState extends State<SignUpPage> {
         return null;
       },
       onSaved: (value) {
-        _firstName = value!;
+        firstNamex = value!;
       },
     );
   }
@@ -224,7 +224,7 @@ class _SignUpPageState extends State<SignUpPage> {
         return null;
       },
       onSaved: (value) {
-        _lastName = value!;
+        lastNamex = value!;
       },
     );
   }

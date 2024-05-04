@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zakat_jahada/view/HomePage.dart';
-import 'package:zakat_jahada/view/LogInPage.dart';
-import 'package:zakat_jahada/view/SignUpPage.dart';
+import 'package:zakat_jahada/view/home_page.dart';
+import 'package:zakat_jahada/view/login_page.dart';
+import 'package:zakat_jahada/view/signup_page.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({super.key});

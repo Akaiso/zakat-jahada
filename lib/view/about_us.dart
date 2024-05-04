@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:zakat_jahada/view/ContactUs.dart';
+import 'package:zakat_jahada/view/contact_us.dart';
 
-import 'DonationHomePage.dart';
+import 'donation_home_page.dart';
 
 class AboutUs extends StatelessWidget {
-  const AboutUs({Key? key}) : super(key: key);
+  const AboutUs({super.key});
 
   @override
   Widget build(BuildContext context) {

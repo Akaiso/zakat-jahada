@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:zakat_jahada/view/DonationCategoryButton.dart';
+import 'package:zakat_jahada/view/donate_category_button.dart';
 
 class DonatePage extends StatefulWidget {
-  const DonatePage({Key? key, required this.categoryButton}) : super(key: key);
+  const DonatePage({super.key, required this.categoryButton});
 
   final DonationCategoryButton categoryButton;
 
@@ -22,7 +22,7 @@ class _DonatePageState extends State<DonatePage> {
   String receiptStatus = "Upload Receipt";
   Color blueColor = Colors.blue;
   bool imageSelected = false;
-  XFile? _image;
+  XFile? imagex;
   final picker = ImagePicker();
 
   @override
@@ -178,7 +178,7 @@ class _DonatePageState extends State<DonatePage> {
                                     source: ImageSource.gallery);
                                 setState(() {
                                   if (pickedFile != null) {
-                                    _image = XFile(pickedFile.path);
+                                    imagex = XFile(pickedFile.path);
                                     imageUpload =
                                         "assets/images/successful.png";
                                     receiptStatus = "Receipt selected";

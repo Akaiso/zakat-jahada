@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../data/ContentData.dart';
-import 'DonationCategoryButton.dart';
+import '../data/content_data.dart';
+import 'donate_category_button.dart';
 
 class DonationHomePage extends StatelessWidget {
   final List<String> category = [
