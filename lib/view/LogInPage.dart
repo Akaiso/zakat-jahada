@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zakat_jahada/view/SignUpPage.dart';
@@ -22,7 +21,7 @@ class _LogInPageState extends State<LogInPage> {
     return Scaffold(
       body: Center(
         child: Padding(
-          padding: MediaQuery.of(context).size.width > 500
+          padding: MediaQuery.of(context).size.width > 800
               ? const EdgeInsets.symmetric(horizontal: 150.0, vertical: 20)
               : const EdgeInsets.symmetric(horizontal: 50, vertical: 20),
           child: SingleChildScrollView(
@@ -109,7 +108,7 @@ class _LogInPageState extends State<LogInPage> {
     return GestureDetector(
       onTap: () {
         // Navigate to sign-up page or perform another action
-        Get.to(const SignUpPage(),
+        Get.to(()=>const SignUpPage(),
             transition: Transition.rightToLeft,
             duration: const Duration(milliseconds: 1500));
       },

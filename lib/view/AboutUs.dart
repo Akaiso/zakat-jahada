@@ -27,7 +27,7 @@ class AboutUs extends StatelessWidget {
                 ),
               )
           ),
-          SizedBox(width: 10)
+          const SizedBox(width: 10)
         ],
       ),
       body: SingleChildScrollView(
@@ -51,7 +51,7 @@ class AboutUs extends StatelessWidget {
               InkWell(
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ContactUs()));
+                      MaterialPageRoute(builder: (context) => const ContactUs()));
                 },
                 child: const Text(
                   "Contact Us to learn more about our initiatives and how you can contribute to our cause.",

@@ -18,7 +18,7 @@ class LandingPage extends StatelessWidget {
                     colorFilter: ColorFilter.mode(
                         Colors.black.withOpacity(0.05), BlendMode.dstATop))),
             // color: Colors.black,
-            child: MediaQuery.of(context).size.width > 500
+            child: MediaQuery.of(context).size.width > 650
                 ? Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -26,7 +26,7 @@ class LandingPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             accessButton(() {
-                              Get.to( const LogInPage(),
+                              Get.to( ()=>const LogInPage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500));
                             }, "Log in", Icons.login),
@@ -34,7 +34,7 @@ class LandingPage extends StatelessWidget {
                               width: 55,
                             ),
                             accessButton(() {
-                              Get.to(const HomePage(),
+                              Get.to(()=>const HomePage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500),
                                   curve: Curves.easeInOut);
@@ -43,7 +43,7 @@ class LandingPage extends StatelessWidget {
                               width: 55,
                             ),
                             accessButton(() {
-                              Get.to( const SignUpPage(),
+                              Get.to( ()=>const SignUpPage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500));
                             }, "Sign up", Icons.add),
@@ -57,7 +57,7 @@ class LandingPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             accessButton(() {
-                              Get.to( const LogInPage(),
+                              Get.to( ()=>const LogInPage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500));
                             }, "Log in", Icons.login),
@@ -65,7 +65,7 @@ class LandingPage extends StatelessWidget {
                               height: 30,
                             ),
                             accessButton(() {
-                              Get.to(const HomePage(),
+                              Get.to(()=>const HomePage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500),
                                   curve: Curves.easeInOut);
@@ -74,7 +74,7 @@ class LandingPage extends StatelessWidget {
                               height: 30,
                             ),
                             accessButton(() {
-                              Get.to( const SignUpPage(),
+                              Get.to( ()=>const SignUpPage(),
                                   transition: Transition.rightToLeft,
                                   duration: const Duration(milliseconds: 1500));
                             }, "Sign up", Icons.add),
@@ -92,6 +92,7 @@ Widget accessButton(onPressed, text, icon) {
         style: ElevatedButton.styleFrom(
             backgroundColor: Colors.black, foregroundColor: Colors.white),
         child:  Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [Icon(icon), const SizedBox(width: 10), Text(text)],
         ),
       ),

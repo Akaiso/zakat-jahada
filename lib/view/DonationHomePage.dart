@@ -3,7 +3,7 @@ import '../data/ContentData.dart';
 import 'DonationCategoryButton.dart';
 
 class DonationHomePage extends StatelessWidget {
-  List<String> category = [
+  final List<String> category = [
     "Mosque building projects",
     'Education and empowerment',
     'Sick and handicapped',
@@ -12,6 +12,8 @@ class DonationHomePage extends StatelessWidget {
     'Prisoners',
     "Growth and Development"
   ];
+
+  DonationHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {

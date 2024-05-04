@@ -3,7 +3,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:zakat_jahada/view/DonationCategoryButton.dart';
 
 class DonatePage extends StatefulWidget {
-  DonatePage({Key? key, required this.categoryButton}) : super(key: key) {}
+  const DonatePage({Key? key, required this.categoryButton}) : super(key: key);
 
   final DonationCategoryButton categoryButton;
 
@@ -32,7 +32,7 @@ class _DonatePageState extends State<DonatePage> {
         appBar: AppBar(
             title: Text(
               "Donate to ${widget.categoryButton.categoryName} ",
-              style: TextStyle(fontSize: 20),
+              style: const TextStyle(fontSize: 20),
             ),
             centerTitle: true),
         body: SingleChildScrollView(
@@ -214,7 +214,7 @@ class _DonatePageState extends State<DonatePage> {
                                   ),
                                   child: Text(
                                     submitStatus,
-                                    style: TextStyle(fontSize: 15),
+                                    style: const TextStyle(fontSize: 15),
                                   ),
                                 ),
                               ),

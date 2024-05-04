@@ -51,7 +51,7 @@ class _ContactUsState extends State<ContactUs> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30),
-                    child: Container(
+                    child: SizedBox(
                       width: MediaQuery.of(context).size.width < 800
                           ? MediaQuery.of(context).size.width
                           : MediaQuery.of(context).size.width * 0.5,
@@ -115,7 +115,7 @@ class _ContactUsState extends State<ContactUs> {
                                           MaterialStateProperty.all(
                                               Colors.green),
                                     ),
-                                    child: Text(feedback, style: TextStyle(color: Colors.white),),
+                                    child: Text(feedback, style: const TextStyle(color: Colors.white),),
                                   ),
                                 ),
                                 const SizedBox(width: 20),
@@ -135,7 +135,7 @@ class _ContactUsState extends State<ContactUs> {
                   ),
                   const SizedBox(width: 80),
                   const SizedBox(height: 100),
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width < 800
                         ? MediaQuery.of(context).size.width
                         : MediaQuery.of(context).size.width * 0.3,
