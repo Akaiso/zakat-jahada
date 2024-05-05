@@ -10,7 +10,7 @@
 .svn/
 migrate_working_dir/
 /lib/auth/secrets.dart
-/android/app/google-services.json
+google-services.json
 
 # IntelliJ related
 *.iml
