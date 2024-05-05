@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:zakat_jahada/view/splash_screen.dart';
+import './auth/secrets.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,8 +16,8 @@ void main() async {
       );
   if (kIsWeb) {
     await Firebase.initializeApp(
-        options: const FirebaseOptions(
-            apiKey: "AIzaSyBlmOTmLFdtC7R89ckfH5Jg28NX3L0llcs",
+        options:  FirebaseOptions(
+            apiKey: mySecretKey,
             appId: "1:125786062487:web:19fc126e58a813c3b0b3d2",
             messagingSenderId: "125786062487",
             projectId: "zakatjahada"));
